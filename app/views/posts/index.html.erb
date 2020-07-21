@@ -1,0 +1,48 @@
+<section>
+  <div class="container">
+  <div class="row">
+    <div class="col-md-12 col-lg-7 hot">
+      <div class="item hot-item">
+        <%# <img src="https://picsum.photos/800/400/?random=9" alt="">   %>
+        <%= image_tag(@post.image) %>
+      </div>
+    </div>
+
+    <div class="col-md-12 col-lg-5 hot-txt">
+      <div class="div">
+        <h3><%= @post.title %></h3>
+        <p><%= @post.content %></p> 
+      </div> 
+      <div class="author">
+        <div class="avatar">
+          <%# <img src="https://picsum.photos/100/100/?random=1" alt=""> %>
+          <%= image_tag(@post.user.avatar) %>
+        </div>
+        
+          <div class="name">
+            <p class="author-name"><%= @post.user.name %></p>
+            <p class="author-place">發佈於 異類矽谷</p> 
+          </div>
+
+          <div class="icon">
+            <img src="./icon-like.svg" alt="">          
+          </div>
+
+          <div class="icon">
+            <img src="./icon-bookmark.svg" alt="">          
+          </div>
+      </div>
+    </div>
+
+  </div>
+
+   <div class="row">
+    <%= render "article" %>
+    <%= render "article" %>
+    <%= render "article" %>    
+    <%= render "article" %>    
+    <%= render "article" %>    
+    <%= render "article" %>    
+   </div>
+  </div>
+</section>
