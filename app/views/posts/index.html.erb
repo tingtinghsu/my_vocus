@@ -37,12 +37,9 @@
   </div>
 
    <div class="row">
-    <%= render "article" %>
-    <%= render "article" %>
-    <%= render "article" %>    
-    <%= render "article" %>    
-    <%= render "article" %>    
-    <%= render "article" %>    
+    <% @posts.each do |post| %>
+      <%= render "article", post: post %>   
+    <% end %>
    </div>
   </div>
 </section>

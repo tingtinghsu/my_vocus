@@ -1,16 +1,16 @@
 <div class="col-md-6 col-lg-4 article">
   <div class="item">
-    <img src="https://picsum.photos/400/150/?random=1" alt="">
-    <h3>為公義殉道～納粹『720密謀案』</h3>
-    <p>試問，當你效忠的領袖是何等的獨裁與殘暴之際，身為既得利益者，有誰膽敢出來，公開指責當權者？甚至更進一步密謀、消滅當權者？咦？不是做個聾子，就是乾脆做個瞎子吧！「鄉愿」，沒錯，這兩字將會是最多人的最佳（唯一？）選擇！ </p>
+    <%= image_tag(post.image) %>
+    <h3><%= post.title %></h3>
+    <p><%= post.content %></p>
   </div>
   <div class="author">
     <div class="avatar">
-      <img src="https://picsum.photos/100/100/?random=1" alt="">
+      <%= image_tag(post.user.avatar) %>
     </div>
 
     <div class="name">
-      <p class="author-name">鱸魚</p>
+      <p class="author-name"><%= post.user.name %></p>
       <p class="author-place">發佈於 異類矽谷</p>
     </div>
 
